@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 
 import "../../css/Main.css";
 
-export default () => {
+const Counter = () => {
   const [counter, setCounter] = useState(0);
   const [hw, sethw] = useState(180);
-  const [topp, setTopp] = useState(90);
+  const [clr, setColor] = useState();
+  const [xyz, setXYZ] = useState();
 
   const colors = [
     "#1D976C",
@@ -33,8 +34,6 @@ export default () => {
     "#DD2476",
   ];
 
-  let xyz;
-  let clr;
   const getRandomColor = () => {
     const rand = Math.random();
     return (
@@ -47,29 +46,29 @@ export default () => {
   };
 
   useEffect(() => {
-    clr = getRandomColor();
+    setColor(getRandomColor());
     document.getElementsByClassName("centered")[0].style.background = clr;
 
     sethw((prev) => prev + 3);
-    setTopp((prev) => prev - 1);
-    xyz = "display:block;width:" + hw + "px;height:" + hw + "px;";
+
+    setXYZ("display:block;width:" + hw + "px;height:" + hw + "px;");
     document.getElementsByClassName("circle")[0].setAttribute("style", xyz);
 
     // alert(getRandomColor());
   }, [counter]);
   return (
-    <div>
+    <div className="full-h-box">
       <div className="centered-main-text">
         <h5 className="main-text">countr.</h5>
       </div>
       <div className="centered">
         <button
           onClick={() => {
-            setCounter((prev) => prev + 1);
+            setCounter((prev) => prev - 1);
           }}
           className="btn"
         >
-          --
+          <i class="lni lni-minus incdec"></i>
         </button>
         <div className="counter-holder">
           <h1 className="counter-var">{counter}</h1>
@@ -80,7 +79,7 @@ export default () => {
           }}
           className="btn"
         >
-          +
+          <i class="lni lni-plus incdec"></i>
         </button>
       </div>
       <div className="circle"></div>
@@ -102,3 +101,5 @@ export default () => {
     </div>
   );
 };
+
+export default Counter;

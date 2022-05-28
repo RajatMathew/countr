@@ -1,19 +1,25 @@
 * {
-margin:0;
-  padding:0;
-  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .centered {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+}
+
+.full-h-box {
   height: 100vh;
 }
 
 body {
-  background-color: #000;
-  font-family: 'DM Sans';
+  background-color: rgb(30, 238, 82);
+  font-family: "DM Sans";
+  overflow: hidden;
+  height: 100%;
 }
 .counter-var {
   color: white;
@@ -61,8 +67,6 @@ body {
 }
 
 .circle {
-  width: 10px;
-  height: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,4 +101,14 @@ body {
 
 .lni:hover {
   color: blueviolet;
+}
+
+.incdec {
+  margin: 0;
+  padding: 8px 3px;
+  font-size: 16px;
+}
+
+.btn {
+  margin: 7px;
 }
