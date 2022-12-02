@@ -83,21 +83,7 @@ const Counter = () => {
         </button>
       </div>
       <div className="circle"></div>
-      <div className="madeby">
-        <div class="social pls">
-          <a href="https://twitter.com/rajat_mathew">
-            <i class="lni lni-twitter-original"></i>
-          </a>
-
-          <a href="https://behance.net/rajatmathew">
-            <i class="lni lni-behance-original"></i>
-          </a>
-
-          <a href="https://github.com/rajatmathew">
-            <i class="lni lni-github-original"></i>
-          </a>
-        </div>
-      </div>
+      
     </div>
   );
 };
