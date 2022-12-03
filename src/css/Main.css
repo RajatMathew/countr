@@ -20,6 +20,7 @@ body {
   font-family: "DM Sans";
   overflow: hidden;
   height: 100%;
+  
 }
 .counter-var {
   color: white;
@@ -53,6 +54,7 @@ body {
   border-radius: 500px;
   font-size: 20px;
   transition: 0.3s;
+  z-index: 999;
 }
 
 .btn:hover {
